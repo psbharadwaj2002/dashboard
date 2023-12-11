@@ -1,0 +1,279 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+.App .Sidebar {
+  width: 20%;
+}
+.App .Display {
+  width: 80%;
+}
+
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 30px 30px;
+  position: relative;
+}
+.Sidebar p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: #013CC6;
+}
+.Sidebar .buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  row-gap: 30px;
+}
+.Sidebar .buttons button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 10px;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  color: grey;
+}
+.Sidebar .buttons button img {
+  margin-right: 15px;
+}
+.Sidebar .buttons button:first-child {
+  color: #0B63F8;
+}
+.Sidebar #help {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 10px;
+  background-color: transparent;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  color: grey;
+  position: absolute;
+  bottom: 20px;
+}
+.Sidebar #help img {
+  margin-right: 15px;
+}
+
+.Display {
+  background-color: rgb(243, 241, 241);
+  padding: 30px 30px;
+  font-family: "Poppins", sans-serif;
+}
+.Display #top {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+.Display #top .search {
+  font-size: 16px;
+  display: flex;
+  padding: 10px;
+  padding-left: 30px;
+  background-color: white;
+  width: 60%;
+  align-items: center;
+  border: 1px solid #ADA7A7;
+}
+.Display #top .search img {
+  height: 25px;
+  width: 25px;
+  margin-right: 15px;
+}
+.Display #top .search input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  color: #858484;
+}
+.Display #top .bell {
+  background-color: white;
+  height: 100%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+}
+.Display #top .bell img {
+  height: 30px;
+  width: 30px;
+}
+.Display #top .bell div {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #FFBC0F;
+  border-radius: 50%;
+  top: -5px;
+  right: -5px;
+}
+.Display #middle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 35px;
+}
+.Display #middle p {
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+.Display #middle div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.Display #middle div div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.Display #middle div div label {
+  font-size: 14px;
+}
+.Display #middle div div input {
+  width: 250px;
+  height: 40px;
+  margin-top: 10px;
+  border: 1px solid #ADA7A7;
+  padding-left: 20px;
+  outline: none;
+  border-radius: 4px;
+}
+.Display #bottom {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 1px;
+}
+.Display #bottom #heading,
+.Display #bottom .data {
+  font-family: "Lato", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.Display #bottom #heading div,
+.Display #bottom .data div {
+  width: 10%;
+}
+.Display #bottom #heading input,
+.Display #bottom .data input {
+  height: 15px;
+  width: 15px;
+}
+.Display #bottom .data {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}
+.Display #bottom .data .blue {
+  color: #0B63F8;
+}
+
+@media only screen and (max-width: 1100px) {
+  .Sidebar button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .Sidebar #help {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .Sidebar button {
+    text-indent: -9999px;
+  }
+}
+@media only screen and (max-width: 830px) {
+  .App {
+    overflow-x: scroll;
+  }
+  .Sidebar {
+    padding-left: 5px;
+  }
+  .Sidebar p {
+    font-size: 15px;
+    padding-left: 5px;
+  }
+  .Display {
+    padding: 10px;
+  }
+  .Display #top {
+    height: 30px;
+  }
+  .Display #top .search {
+    padding-left: 20px;
+  }
+  .Display #top .search img {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+  }
+  .Display #top .search input {
+    font-size: 13px;
+  }
+  .Display #top .bell {
+    width: 30px;
+    height: 100%;
+  }
+  .Display #top .bell img {
+    width: 30px;
+    height: 30px;
+  }
+  .Display #top .bell div {
+    width: 5px;
+    height: 5px;
+    top: -2px;
+    right: -2px;
+  }
+  .Display #middle {
+    margin-top: 20px;
+  }
+  .Display #middle p {
+    font-size: 20px;
+  }
+  .Display #middle div div label {
+    font-size: 12px;
+  }
+  .Display #middle div div input {
+    width: 150px;
+    height: 30px;
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  .Display #bottom #heading,
+  .Display #bottom .data {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .Display #bottom #heading,
+  .Display #bottom .data {
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=styles.css.map */

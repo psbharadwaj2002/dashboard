@@ -1,0 +1,409 @@
+// font-family: 'Lato', sans-serif;
+// font-family: 'Poppins', sans-serif;
+.App {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100vh;
+
+    .Sidebar {
+        width: 20%;
+    }
+
+    .Display {
+        width: 80%;
+    }
+}
+
+.Sidebar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 30px 30px;
+    position: relative;
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        color: #013CC6;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        row-gap: 30px;
+
+        button {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding-left: 10px;
+            background-color: transparent;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            cursor: pointer;
+            color: grey;
+
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+
+    .buttons button:first-child {
+        color: #0B63F8;
+    }
+
+    #help {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 10px;
+        background-color: transparent;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        color: grey;
+        position: absolute;
+        bottom: 20px;
+
+        img {
+            margin-right: 15px;
+        }
+    }
+}
+
+.Display {
+    background-color: rgb(243, 241, 241);
+    padding: 30px 30px;
+    font-family: 'Poppins', sans-serif;
+
+    #top {
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+
+        .search {
+            font-size: 16px;
+            // height: 50px;
+            display: flex;
+            padding: 10px;
+            padding-left: 30px;
+            background-color: white;
+            width: 60%;
+            align-items: center;
+            border: 1px solid #ADA7A7;
+
+            img {
+                height: 25px;
+                width: 25px;
+                margin-right: 15px;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                width: 100%;
+                font-size: 16px;
+                color: #858484;
+            }
+
+        }
+
+        .bell {
+            background-color: white;
+            height: 100%;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            cursor: pointer;
+            border: none;
+
+            // padding: 15px;
+            img {
+                height: 30px;
+                width: 30px;
+            }
+
+            div {
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                background-color: #FFBC0F;
+                border-radius: 50%;
+                top: -5px;
+                right: -5px
+            }
+        }
+    }
+
+    #middle {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 35px;
+
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 10px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+
+
+                label {
+                    font-size: 14px;
+                }
+
+                input {
+                    width: 250px;
+                    height: 40px;
+                    margin-top: 10px;
+                    border: 1px solid #ADA7A7;
+                    padding-left: 20px;
+                    outline: none;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+
+    #bottom {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        row-gap: 1px;
+
+        #heading,
+        .data {
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: white;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+
+            div {
+                width: 10%;
+            }
+
+            input {
+                height: 15px;
+                width: 15px;
+            }
+        }
+
+        .data {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 300;
+
+            .blue {
+                color: #0B63F8;
+            }
+        }
+
+
+
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .Sidebar {
+        button {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #help {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .Sidebar {
+        button {
+            text-indent: -9999px;
+        }
+    }
+}
+
+// @media only screen and (max-width: 830px) {
+//     .Display {
+
+//         #bottom {
+
+//             #heading,
+//             .data {
+//                 font-size: 10px;
+//             }
+//         }
+//     }
+// }
+
+
+@media only screen and (max-width: 830px) {
+
+    .App {
+        // width: 115vw;
+        overflow-x: scroll;
+
+        .Sidebar {
+            // width: 18vw;
+        }
+
+        .Display {
+            // width: 97vw;
+        }
+    }
+
+    .Sidebar {
+        padding-left: 5px;
+        // width: 5vw;
+
+        p {
+            font-size: 15px;
+            padding-left: 5px;
+        }
+    }
+
+    .Display {
+        // width: 100vw;
+        padding: 10px;
+
+        #top {
+            height: 30px;
+            // padding-left: 20px;
+
+            .search {
+                padding-left: 20px;
+
+                img {
+                    height: 15px;
+                    width: 15px;
+                    margin-right: 10px;
+                }
+
+                input {
+                    font-size: 13px;
+                }
+            }
+
+            .bell {
+                width: 30px;
+                height: 100%;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                div {
+                    width: 5px;
+                    height: 5px;
+
+                    top: -2px;
+                    right: -2px;
+                }
+            }
+        }
+
+        #middle {
+            margin-top: 20px;
+
+            p {
+                font-size: 20px;
+            }
+
+            div {
+
+                div {
+                    label {
+                        font-size: 12px;
+                    }
+
+                    input {
+                        width: 150px;
+                        height: 30px;
+                        font-size: 10px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        #bottom {
+
+            #heading,
+            .data {
+                font-size: 10px;
+            }
+
+
+
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .Display {
+
+        #bottom {
+
+            #heading,
+            .data {
+                font-size: 7px;
+            }
+        }
+    }
+}
+
+
+// @media only screen and (max-width: 500px) {
+
+//     .App {
+//         display: flex;
+//         flex-direction: column;
+//         flex-wrap: wrap;
+
+//     }
+
+//     .Sidebar {
+//         width: 100%;
+//     }
+
+//     .Display {
+//         width: 100%;
+
+//         // #bottom {
+
+//         //     #heading,
+//         //     .data {
+//         //         font-size: 10px;
+//         //     }
+//         // }
+//     }
+// }
